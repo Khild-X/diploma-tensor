@@ -1,0 +1,73 @@
+@import "../../assets/variables";
+
+.profile {
+  position: relative;
+  width: $widthProfile;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.loadingProfile{
+  width: $widthProfile;
+  height: 500px;
+  background-color: #FFF;
+  @include flexCenterCenter;
+}
+
+.profileImg {
+  width: $widthProfile;
+  height: $widthProfile;
+}
+
+.profileRow {
+  width: 100%;
+  padding: 8px;
+  border-bottom: 1px solid rgba(217, 214, 214, 0.6);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.btns{
+  margin-top: auto;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.btnRepos{
+  margin-top: 8px;
+  width: 100%;
+  @include flexCenterCenter;
+  text-decoration: none;
+  padding: 8px 0;
+}
+
+.profileDelBtn{
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background-color: #092b4b;
+  color: #FFF;
+  @include flexCenterCenter;
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.chart{
+  margin-bottom: 0.2em;
+  & h3{
+    font-size: 1.5em;
+  }
+  & section {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+  }
+}
+
+.charts{
+}

@@ -1,0 +1,35 @@
+@import "../../assets/variables";
+
+.wrapper {
+  width: 100%;
+  background: white;
+  position: relative;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.ContributionCalendarLabel{
+  font-size: 12px;
+}
+
+.users{
+  position: relative;
+  display: flex;
+  overflow-x: scroll;
+  padding: 8px;
+}
+
+.addUserBtn{
+  position: absolute !important;
+  top: 20px;
+  right: 20px;
+}
+
+.iconWrapper{
+  margin-right: 4px;
+}
