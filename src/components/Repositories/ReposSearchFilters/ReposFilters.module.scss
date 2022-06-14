@@ -1,0 +1,44 @@
+@import "../../../assets/variables";
+
+.filters {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  &__form{
+    display: contents;
+  }
+
+  &__mainFilters{
+    display: grid;
+    grid-template-columns: 1fr auto 4fr auto auto auto;
+    gap: 1em;
+    align-items: center;
+  }
+
+  &__twoInOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__flexItem {
+    flex: 1 1 auto;
+  }
+
+  &__loading {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 8px;
+    width: 1em;
+    height: 1em;
+  }
+
+}

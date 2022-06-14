@@ -1,23 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useRoutes} from "react-router-dom";
+import routes from "./components/Routes/Routes";
+import Header from "./components/Header/Header";
+import {useAppDispatch} from "./redux/hooks/reduxHooks";
+import {checkIsAuth} from "./redux/reducers/ProfileReducer/ActionCreators";
+import Messages from "./components/Messages/Messages";
+import classes from "./pages/MainPage/MainPage.module.scss";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function GitStatApp() {
+    const dispatch = useAppDispatch();
+    useEffect(() => {
+        dispatch(checkIsAuth());
+    }, []);
 
-// export default App;
+    const element = useRoutes(routes);
+    return (<>
+            <Header/>
+            <Messages />
+            <div className={classes.container}>
+                {element}
+            </div>
+        </>
+    );
+}
+
+export default GitStatApp;
